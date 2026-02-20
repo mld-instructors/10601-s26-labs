@@ -91,10 +91,10 @@ def visualize_perceptron_3d(
 
     # Data points at their true label height
     ax1.scatter(xs[pos, 0], xs[pos, 1], np.ones(pos.sum()),
-                c="steelblue", marker="^", s=20, alpha=0.75,
+                c="firebrick", marker="^", s=20, alpha=0.75,
                 depthshade=True, label="y = +1")
     ax1.scatter(xs[neg, 0], xs[neg, 1], -np.ones(neg.sum()),
-                c="firebrick", marker="o", s=20, alpha=0.75,
+                c="steelblue", marker="o", s=20, alpha=0.75,
                 depthshade=True, label="y = -1")
 
     ax1.set_xlabel("x1", labelpad=8)
@@ -121,10 +121,10 @@ def visualize_perceptron_3d(
                     colors="limegreen", linewidths=2.0, zdir="z", offset=-1.0)
 
     ax2.scatter(xs[pos, 0], xs[pos, 1], np.ones(pos.sum()),
-                c="steelblue", marker="^", s=20, alpha=0.75,
+                c="firebrick", marker="^", s=20, alpha=0.75,
                 depthshade=True, label="y = +1")
     ax2.scatter(xs[neg, 0], xs[neg, 1], -np.ones(neg.sum()),
-                c="firebrick", marker="o", s=20, alpha=0.75,
+                c="steelblue", marker="o", s=20, alpha=0.75,
                 depthshade=True, label="y = -1")
 
     ax2.set_xlabel("x1", labelpad=8)
@@ -199,12 +199,12 @@ def visualize_training_snapshots(
         if len(xs_pos_sub) > 0:
             ax.scatter(xs_pos_sub[:, 0], xs_pos_sub[:, 1],
                        np.ones(len(xs_pos_sub)),
-                       c="steelblue", marker="^", s=10,
+                       c="firebrick", marker="^", s=10,
                        alpha=0.65, depthshade=True)
         if len(xs_neg_sub) > 0:
             ax.scatter(xs_neg_sub[:, 0], xs_neg_sub[:, 1],
                        -np.ones(len(xs_neg_sub)),
-                       c="firebrick", marker="o", s=10,
+                       c="steelblue", marker="o", s=10,
                        alpha=0.65, depthshade=True)
 
         step_label = "init" if step == 0 else f"t = {step}"
